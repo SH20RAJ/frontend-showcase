@@ -69,8 +69,8 @@ export default function CategoryCards() {
                         <div key={category.id} className="category-card">
                             <a href={category.link} className="category-link">
                                 <div className="category-image-container">
-                                    <img 
-                                        src={category.image} 
+                                    <img
+                                        src={category.image}
                                         alt={category.title}
                                         className="category-image"
                                     />

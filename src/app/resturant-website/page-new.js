@@ -53,19 +53,19 @@ export default function RestaurantWebsite() {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50)
         }
-        
+
         const handleMouseMove = (e) => {
             setMousePosition({ x: e.clientX, y: e.clientY })
         }
-        
+
         window.addEventListener('scroll', handleScroll)
         window.addEventListener('mousemove', handleMouseMove)
-        
+
         // Auto-advance hero slides
         const slideInterval = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % 3)
         }, 5000)
-        
+
         return () => {
             window.removeEventListener('scroll', handleScroll)
             window.removeEventListener('mousemove', handleMouseMove)
@@ -83,7 +83,7 @@ export default function RestaurantWebsite() {
         },
         {
             title: "Michelin-Starred",
-            subtitle: "Dining Experience", 
+            subtitle: "Dining Experience",
             description: "Three-star excellence with every dish, creating memories that last a lifetime",
             image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
             cta: "Reserve Now"
@@ -103,23 +103,23 @@ export default function RestaurantWebsite() {
             icon: Crown,
             color: "from-amber-400 to-orange-500",
             items: [
-                { 
-                    name: "Wagyu Tenderloin Symphony", 
-                    description: "Grade A5 Wagyu with truffle foam, roasted bone marrow, and seasonal microgreens", 
+                {
+                    name: "Wagyu Tenderloin Symphony",
+                    description: "Grade A5 Wagyu with truffle foam, roasted bone marrow, and seasonal microgreens",
                     price: "$185",
                     image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
                     dietary: ["gluten-free"]
                 },
-                { 
-                    name: "Ocean Treasure Platter", 
-                    description: "Fresh lobster, sea urchin, caviar service with champagne pearls and citrus caviar", 
+                {
+                    name: "Ocean Treasure Platter",
+                    description: "Fresh lobster, sea urchin, caviar service with champagne pearls and citrus caviar",
                     price: "$145",
                     image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
                     dietary: ["pescatarian"]
                 },
-                { 
-                    name: "Garden of Eden", 
-                    description: "Molecular gastronomy vegetable tasting with edible flowers and herb essences", 
+                {
+                    name: "Garden of Eden",
+                    description: "Molecular gastronomy vegetable tasting with edible flowers and herb essences",
                     price: "$95",
                     image: "https://images.unsplash.com/photo-1572441713132-51c75654db73?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
                     dietary: ["vegan", "gluten-free"]
@@ -131,15 +131,15 @@ export default function RestaurantWebsite() {
             icon: Sparkles,
             color: "from-emerald-400 to-teal-500",
             items: [
-                { 
-                    name: "Golden Truffle Arancini", 
-                    description: "Crispy saffron risotto spheres with black truffle and aged parmesan", 
+                {
+                    name: "Golden Truffle Arancini",
+                    description: "Crispy saffron risotto spheres with black truffle and aged parmesan",
                     price: "$28",
                     image: "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                 },
-                { 
-                    name: "Tuna Tataki Perfection", 
-                    description: "Sesame-crusted yellowfin with wasabi aioli and pickled daikon", 
+                {
+                    name: "Tuna Tataki Perfection",
+                    description: "Sesame-crusted yellowfin with wasabi aioli and pickled daikon",
                     price: "$32",
                     image: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                 }
@@ -150,15 +150,15 @@ export default function RestaurantWebsite() {
             icon: Gift,
             color: "from-purple-400 to-pink-500",
             items: [
-                { 
-                    name: "Chocolate Nebula", 
-                    description: "Dark chocolate sphere with surprise center, gold dust, and raspberry pearls", 
+                {
+                    name: "Chocolate Nebula",
+                    description: "Dark chocolate sphere with surprise center, gold dust, and raspberry pearls",
                     price: "$24",
                     image: "https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                 },
-                { 
-                    name: "Levitating Tiramisu", 
-                    description: "Deconstructed tiramisu with coffee caviar and mascarpone clouds", 
+                {
+                    name: "Levitating Tiramisu",
+                    description: "Deconstructed tiramisu with coffee caviar and mascarpone clouds",
                     price: "$22",
                     image: "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                 }
@@ -179,7 +179,7 @@ export default function RestaurantWebsite() {
             title: "Wine Cellar Experience",
             description: "Private dining in our 200-year-old wine cellar",
             price: "From $195",
-            duration: "2.5 hours", 
+            duration: "2.5 hours",
             image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
             features: ["Sommelier Guide", "Rare Vintages", "Private Setting"]
         },
@@ -235,7 +235,7 @@ export default function RestaurantWebsite() {
     return (
         <div className="min-h-screen bg-black text-white overflow-hidden">
             {/* Cursor Follower */}
-            <div 
+            <div
                 className="cursor-follower"
                 style={{
                     left: mousePosition.x,
@@ -244,9 +244,8 @@ export default function RestaurantWebsite() {
             />
 
             {/* Navigation */}
-            <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-                scrolled ? 'bg-black/90 backdrop-blur-xl border-b border-white/10' : 'bg-transparent'
-            }`}>
+            <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-black/90 backdrop-blur-xl border-b border-white/10' : 'bg-transparent'
+                }`}>
                 <div className="container mx-auto px-6 py-4">
                     <div className="flex items-center justify-between">
                         <div className="text-2xl font-light tracking-wider">
@@ -284,9 +283,8 @@ export default function RestaurantWebsite() {
                 </div>
 
                 {/* Mobile Menu */}
-                <div className={`md:hidden transition-all duration-300 ${
-                    isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
-                } overflow-hidden bg-black/95 backdrop-blur-xl`}>
+                <div className={`md:hidden transition-all duration-300 ${isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+                    } overflow-hidden bg-black/95 backdrop-blur-xl`}>
                     <div className="container mx-auto px-6 py-4 space-y-4">
                         {navItems.map((item) => (
                             <a
@@ -312,11 +310,10 @@ export default function RestaurantWebsite() {
                     {heroSlides.map((slide, index) => (
                         <div
                             key={index}
-                            className={`absolute inset-0 transition-opacity duration-1000 ${
-                                currentSlide === index ? 'opacity-100' : 'opacity-0'
-                            }`}
+                            className={`absolute inset-0 transition-opacity duration-1000 ${currentSlide === index ? 'opacity-100' : 'opacity-0'
+                                }`}
                         >
-                            <div 
+                            <div
                                 className="absolute inset-0 bg-cover bg-center"
                                 style={{ backgroundImage: `url(${slide.image})` }}
                             />
@@ -346,7 +343,7 @@ export default function RestaurantWebsite() {
                     <div className="mb-6">
                         <Crown className="w-16 h-16 mx-auto text-yellow-400 mb-4 animate-pulse" />
                     </div>
-                    
+
                     <h1 className="text-6xl md:text-8xl font-extralight mb-6 leading-tight">
                         <span className="block overflow-hidden">
                             <span className="block transform translate-y-full animate-slide-up" style={{ animationDelay: '0.2s' }}>
@@ -359,25 +356,25 @@ export default function RestaurantWebsite() {
                             </span>
                         </span>
                     </h1>
-                    
+
                     <p className="text-xl md:text-2xl text-white/80 mb-12 font-light max-w-2xl mx-auto overflow-hidden">
                         <span className="block transform translate-y-full animate-slide-up" style={{ animationDelay: '0.6s' }}>
                             {heroSlides[currentSlide].description}
                         </span>
                     </p>
-                    
+
                     <div className="space-x-4 overflow-hidden">
-                        <Button 
-                            size="lg" 
+                        <Button
+                            size="lg"
                             className="bg-gradient-to-r from-yellow-400 to-orange-300 text-black hover:from-yellow-500 hover:to-orange-400 px-8 py-3 text-lg transform translate-y-full animate-slide-up"
                             style={{ animationDelay: '0.8s' }}
                         >
                             {heroSlides[currentSlide].cta}
                             <ArrowRight className="ml-2 w-5 h-5" />
                         </Button>
-                        <Button 
-                            variant="outline" 
-                            size="lg" 
+                        <Button
+                            variant="outline"
+                            size="lg"
                             className="border-white/30 text-white hover:bg-white/10 px-8 py-3 text-lg transform translate-y-full animate-slide-up"
                             style={{ animationDelay: '1s' }}
                         >
@@ -393,9 +390,8 @@ export default function RestaurantWebsite() {
                         <button
                             key={index}
                             onClick={() => setCurrentSlide(index)}
-                            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                                currentSlide === index ? 'bg-yellow-400' : 'bg-white/30'
-                            }`}
+                            className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === index ? 'bg-yellow-400' : 'bg-white/30'
+                                }`}
                         />
                     ))}
                 </div>
@@ -462,9 +458,9 @@ export default function RestaurantWebsite() {
                                     {category.items.map((item, itemIndex) => (
                                         <Card key={itemIndex} className="bg-gray-900/50 border-gray-800 hover:border-yellow-400/50 transition-all duration-500 group overflow-hidden backdrop-blur-sm">
                                             <div className="relative overflow-hidden">
-                                                <AspectRatio ratio={16/9}>
-                                                    <img 
-                                                        src={item.image} 
+                                                <AspectRatio ratio={16 / 9}>
+                                                    <img
+                                                        src={item.image}
                                                         alt={item.name}
                                                         className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
                                                     />
@@ -522,9 +518,9 @@ export default function RestaurantWebsite() {
                         {experiences.map((experience, index) => (
                             <Card key={index} className="bg-gradient-to-b from-gray-800/50 to-gray-900/50 border-gray-700 hover:border-yellow-400/50 transition-all duration-500 group overflow-hidden backdrop-blur-sm">
                                 <div className="relative overflow-hidden">
-                                    <AspectRatio ratio={4/3}>
-                                        <img 
-                                            src={experience.image} 
+                                    <AspectRatio ratio={4 / 3}>
+                                        <img
+                                            src={experience.image}
                                             alt={experience.title}
                                             className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
                                         />
@@ -615,7 +611,7 @@ export default function RestaurantWebsite() {
                                 </span>
                             </h2>
                             <p className="text-xl text-white/70 mb-8 leading-relaxed">
-                                Step into a world where culinary artistry meets unparalleled service. 
+                                Step into a world where culinary artistry meets unparalleled service.
                                 Every reservation is an invitation to experience the extraordinary.
                             </p>
 
@@ -661,8 +657,8 @@ export default function RestaurantWebsite() {
 
                         <div className="relative">
                             <div className="aspect-square rounded-2xl overflow-hidden relative">
-                                <img 
-                                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                <img
+                                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                                     alt="Restaurant Interior"
                                     className="object-cover w-full h-full"
                                 />
@@ -724,9 +720,9 @@ export default function RestaurantWebsite() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <Separator className="bg-gray-800 mb-8" />
-                    
+
                     <div className="flex flex-col md:flex-row justify-between items-center text-white/60 text-sm">
                         <p>&copy; 2024 Lumière Restaurant. All rights reserved.</p>
                         <div className="flex space-x-6 mt-4 md:mt-0">

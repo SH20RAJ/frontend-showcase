@@ -245,8 +245,8 @@ export function TestimonialsSection() {
                                                         setAutoplay(false)
                                                     }}
                                                     className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentReview
-                                                            ? 'bg-amber-500 scale-125'
-                                                            : 'bg-gray-300 hover:bg-gray-400'
+                                                        ? 'bg-amber-500 scale-125'
+                                                        : 'bg-gray-300 hover:bg-gray-400'
                                                         }`}
                                                 />
                                             ))}

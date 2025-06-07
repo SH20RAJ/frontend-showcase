@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function HeroCarousel() {
@@ -71,10 +72,13 @@ export default function HeroCarousel() {
                     {slides.map((slide, index) => (
                         <div key={slide.id} className="carousel-slide">
                             <div className="slide-background">
-                                <img
+                                <Image
                                     src={slide.image}
                                     alt={slide.title}
+                                    width={1200}
+                                    height={400}
                                     className="slide-image"
+                                    priority={index === 0}
                                 />
                                 <div className={`slide-overlay bg-gradient-to-r ${slide.gradient}`} />
                             </div>

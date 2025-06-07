@@ -2,11 +2,12 @@
 
 import { useState } from 'react'
 import { Search, MapPin, ShoppingCart, User, Menu, ChevronDown } from 'lucide-react'
+import { useCart } from './CartContext'
 
-export default function Header() {
+export default function Header({ onCartClick }) {
     const [searchQuery, setSearchQuery] = useState('')
     const [searchCategory, setSearchCategory] = useState('All')
-    const [cartCount, setCartCount] = useState(3)
+    const { getTotalItems } = useCart()
 
     const categories = [
         'All', 'Electronics', 'Books', 'Home & Garden', 'Fashion',
@@ -100,12 +101,15 @@ export default function Header() {
                         </div>
 
                         {/* Cart */}
-                        <div className="flex items-center cursor-pointer hover:bg-gray-700 px-2 py-1 rounded relative">
+                        <div
+                            className="flex items-center cursor-pointer hover:bg-gray-700 px-2 py-1 rounded relative"
+                            onClick={onCartClick}
+                        >
                             <div className="relative">
                                 <ShoppingCart className="h-6 w-6 text-white" />
-                                {cartCount > 0 && (
+                                {getTotalItems() > 0 && (
                                     <span className="absolute -top-2 -right-2 bg-orange-400 text-black text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
-                                        {cartCount}
+                                        {getTotalItems()}
                                     </span>
                                 )}
                             </div>

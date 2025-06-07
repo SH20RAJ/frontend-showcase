@@ -17,7 +17,7 @@ export default function RestaurantWebsite() {
             {/* Revolutionary Background Effects */}
             <div className="quantum-bg"></div>
             <div className="neural-pattern"></div>
-            
+
             {/* Navigation */}
             <Navigation />
 
@@ -46,7 +46,7 @@ export default function RestaurantWebsite() {
 
             {/* Footer */}
             <Footer />
-            
+
             {/* Revolutionary AI Assistant */}
             <AIAssistant />
         </div>

@@ -27,7 +27,7 @@ export default function Navigation() {
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex items-center space-x-6 overflow-x-auto custom-scrollbar">
                     {/* All Menu */}
-                    <div 
+                    <div
                         className="flex items-center space-x-1 cursor-pointer hover:bg-gray-600 px-2 py-1 rounded whitespace-nowrap"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
@@ -37,11 +37,10 @@ export default function Navigation() {
 
                     {/* Navigation Items */}
                     {navItems.map((item, index) => (
-                        <div 
+                        <div
                             key={index}
-                            className={`cursor-pointer hover:bg-gray-600 px-2 py-1 rounded whitespace-nowrap text-sm ${
-                                item.highlight ? 'text-orange-400 font-semibold' : ''
-                            }`}
+                            className={`cursor-pointer hover:bg-gray-600 px-2 py-1 rounded whitespace-nowrap text-sm ${item.highlight ? 'text-orange-400 font-semibold' : ''
+                                }`}
                         >
                             {item.name}
                         </div>
@@ -71,7 +70,7 @@ export default function Navigation() {
                                     <li className="hover:text-orange-600 cursor-pointer">Automotive</li>
                                 </ul>
                             </div>
-                            
+
                             <div>
                                 <h3 className="font-semibold text-gray-800 mb-3">Programs & Features</h3>
                                 <ul className="space-y-2 text-sm text-gray-600">
@@ -82,7 +81,7 @@ export default function Navigation() {
                                     <li className="hover:text-orange-600 cursor-pointer">Amazon Photos</li>
                                 </ul>
                             </div>
-                            
+
                             <div>
                                 <h3 className="font-semibold text-gray-800 mb-3">Help & Settings</h3>
                                 <ul className="space-y-2 text-sm text-gray-600">
@@ -93,7 +92,7 @@ export default function Navigation() {
                                     <li className="hover:text-orange-600 cursor-pointer">Switch Country</li>
                                 </ul>
                             </div>
-                            
+
                             <div className="hidden md:block">
                                 <h3 className="font-semibold text-gray-800 mb-3">Fashion</h3>
                                 <ul className="space-y-2 text-sm text-gray-600">
@@ -104,7 +103,7 @@ export default function Navigation() {
                                     <li className="hover:text-orange-600 cursor-pointer">Jewelry</li>
                                 </ul>
                             </div>
-                            
+
                             <div className="hidden lg:block">
                                 <h3 className="font-semibold text-gray-800 mb-3">Home & Garden</h3>
                                 <ul className="space-y-2 text-sm text-gray-600">
@@ -115,7 +114,7 @@ export default function Navigation() {
                                     <li className="hover:text-orange-600 cursor-pointer">Tools</li>
                                 </ul>
                             </div>
-                            
+
                             <div className="hidden lg:block">
                                 <h3 className="font-semibold text-gray-800 mb-3">Entertainment</h3>
                                 <ul className="space-y-2 text-sm text-gray-600">

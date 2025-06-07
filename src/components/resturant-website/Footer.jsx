@@ -98,7 +98,7 @@ export function Footer() {
                                 <p className="text-xl text-gray-300 mb-8">
                                     Subscribe to our newsletter for exclusive events, seasonal menus, and culinary insights from our chefs.
                                 </p>
-                                
+
                                 <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                                     <Input
                                         type="email"
@@ -108,7 +108,7 @@ export function Footer() {
                                         className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-amber-400 py-6"
                                         required
                                     />
-                                    <Button 
+                                    <Button
                                         type="submit"
                                         className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 px-8 py-6 font-semibold transition-all duration-300 hover:scale-105"
                                     >
@@ -132,8 +132,8 @@ export function Footer() {
                                             </span>
                                         </h2>
                                         <p className="text-gray-300 text-lg leading-relaxed">
-                                            Where culinary artistry meets exceptional service. For over two decades, 
-                                            we've been creating unforgettable dining experiences that celebrate the 
+                                            Where culinary artistry meets exceptional service. For over two decades,
+                                            we've been creating unforgettable dining experiences that celebrate the
                                             finest in French cuisine and hospitality.
                                         </p>
                                     </div>
@@ -193,7 +193,7 @@ export function Footer() {
                                     <ul className="space-y-3">
                                         {quickLinks.map((link) => (
                                             <li key={link.name}>
-                                                <a 
+                                                <a
                                                     href={link.href}
                                                     className="text-gray-300 hover:text-amber-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
                                                 >
@@ -219,7 +219,7 @@ export function Footer() {
                                     <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
                                     <div className="flex space-x-4">
                                         {socialLinks.map((social, index) => (
-                                            <a 
+                                            <a
                                                 key={index}
                                                 href={social.href}
                                                 target="_blank"
@@ -248,7 +248,7 @@ export function Footer() {
 
                                 <div className="flex flex-wrap justify-center gap-6">
                                     {legalLinks.map((link) => (
-                                        <a 
+                                        <a
                                             key={link.name}
                                             href={link.href}
                                             className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"

@@ -1,12 +1,15 @@
 "use client"
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { Star, Heart, ShoppingCart, Filter } from 'lucide-react'
+import { useCart } from './CartContext'
 
 export default function ProductGrid() {
     const [selectedCategory, setSelectedCategory] = useState('all')
     const [sortBy, setSortBy] = useState('featured')
     const [priceRange, setPriceRange] = useState([0, 1000])
+    const { addToCart, toggleWishlist, isInWishlist } = useCart()
 
     const categories = [
         { id: 'all', name: 'All Products' },
@@ -268,13 +271,18 @@ export default function ProductGrid() {
                                 )}
 
                                 <div className="product-image-container">
-                                    <img
+                                    <Image
                                         src={product.image}
                                         alt={product.title}
+                                        width={300}
+                                        height={300}
                                         className="product-image"
                                     />
-                                    <button className="wishlist-btn">
-                                        <Heart size={16} />
+                                    <button
+                                        className={`wishlist-btn ${isInWishlist(product.id) ? 'text-red-500' : ''}`}
+                                        onClick={() => toggleWishlist(product)}
+                                    >
+                                        <Heart size={16} fill={isInWishlist(product.id) ? 'currentColor' : 'none'} />
                                     </button>
                                 </div>
 
@@ -304,7 +312,10 @@ export default function ProductGrid() {
                                         )}
                                     </div>
 
-                                    <button className="add-to-cart-btn">
+                                    <button
+                                        className="add-to-cart-btn"
+                                        onClick={() => addToCart(product)}
+                                    >
                                         <ShoppingCart size={16} />
                                         Add to Cart
                                     </button>

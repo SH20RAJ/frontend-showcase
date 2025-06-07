@@ -11,7 +11,7 @@ export function Navigation() {
     const [isVoiceActive, setIsVoiceActive] = useState(false)
     const [aiSuggestion, setAiSuggestion] = useState('')
     const [currentTime, setCurrentTime] = useState(new Date())
-    
+
     // AI-powered navigation suggestions
     useEffect(() => {
         const suggestions = [
@@ -20,12 +20,12 @@ export function Navigation() {
             "Live jazz performance starts at 8:00 PM",
             "Wine pairing recommended for tonight's menu"
         ]
-        
+
         const interval = setInterval(() => {
             const randomSuggestion = suggestions[Math.floor(Math.random() * suggestions.length)]
             setAiSuggestion(randomSuggestion)
         }, 8000)
-        
+
         return () => clearInterval(interval)
     }, [])
 
@@ -34,7 +34,7 @@ export function Navigation() {
         const timer = setInterval(() => {
             setCurrentTime(new Date())
         }, 1000)
-        
+
         return () => clearInterval(timer)
     }, [])
 
@@ -67,11 +67,10 @@ export function Navigation() {
     ]
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-            scrolled 
-                ? 'bg-black/90 backdrop-blur-lg border-b border-white/10 shadow-2xl' 
+        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+                ? 'bg-black/90 backdrop-blur-lg border-b border-white/10 shadow-2xl'
                 : 'bg-transparent'
-        }`}>
+            }`}>
             {/* AI Suggestion Banner */}
             {aiSuggestion && (
                 <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm border-b border-purple-500/30 py-2 px-4 text-center">
@@ -81,7 +80,7 @@ export function Navigation() {
                     </div>
                 </div>
             )}
-            
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
                     {/* Logo */}
@@ -117,7 +116,7 @@ export function Navigation() {
                         </div>
                         <div className="w-px h-8 bg-white/20"></div>
                     </div>
-                    
+
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-8">
                         {navItems.map((item) => (
@@ -134,15 +133,15 @@ export function Navigation() {
 
                     {/* Action Buttons */}
                     <div className="hidden md:flex items-center space-x-4">
-                        <Button 
-                            variant="ghost" 
+                        <Button
+                            variant="ghost"
                             size="sm"
                             className="text-white hover:bg-white/10 transition-all duration-300"
                         >
                             <Phone className="h-4 w-4 mr-2" />
                             Call
                         </Button>
-                        <Button 
+                        <Button
                             size="sm"
                             className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 transition-all duration-300 hover:scale-105 shadow-lg"
                         >
@@ -183,17 +182,17 @@ export function Navigation() {
                                 {item.name}
                             </a>
                         ))}
-                        
+
                         <div className="pt-4 space-y-3 border-t border-white/10">
-                            <Button 
-                                variant="outline" 
+                            <Button
+                                variant="outline"
                                 className="w-full bg-white/10 border-white/20 text-white hover:bg-white/20 transition-all duration-300"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 <Phone className="h-4 w-4 mr-2" />
                                 Call Now
                             </Button>
-                            <Button 
+                            <Button
                                 className="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 transition-all duration-300"
                                 onClick={() => setIsMenuOpen(false)}
                             >

@@ -1,7 +1,9 @@
 "use client"
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { Clock, Star, ShoppingCart } from 'lucide-react'
+import { useCart } from './CartContext'
 
 export default function DealsSections() {
     const [timeLeft, setTimeLeft] = useState({
@@ -9,6 +11,7 @@ export default function DealsSections() {
         minutes: 34,
         seconds: 56
     })
+    const { addToCart } = useCart()
 
     // Lightning deals data
     const lightningDeals = [
@@ -113,17 +116,17 @@ export default function DealsSections() {
                 if (newSeconds >= 0) {
                     return { ...prev, seconds: newSeconds }
                 }
-                
+
                 const newMinutes = prev.minutes - 1
                 if (newMinutes >= 0) {
                     return { ...prev, minutes: newMinutes, seconds: 59 }
                 }
-                
+
                 const newHours = prev.hours - 1
                 if (newHours >= 0) {
                     return { hours: newHours, minutes: 59, seconds: 59 }
                 }
-                
+
                 return { hours: 0, minutes: 0, seconds: 0 }
             })
         }, 1000)
@@ -166,7 +169,7 @@ export default function DealsSections() {
                             </span>
                         </div>
                     </div>
-                    
+
                     <div className="deals-grid">
                         {lightningDeals.map((deal) => (
                             <div key={deal.id} className="deal-card lightning-deal">
@@ -174,41 +177,46 @@ export default function DealsSections() {
                                     <span className="discount-badge">-{deal.discount}%</span>
                                     <span className="lightning-badge">⚡ Lightning Deal</span>
                                 </div>
-                                
+
                                 <div className="deal-image-container">
-                                    <img 
-                                        src={deal.image} 
+                                    <Image
+                                        src={deal.image}
                                         alt={deal.title}
+                                        width={300}
+                                        height={300}
                                         className="deal-image"
                                     />
                                 </div>
-                                
+
                                 <div className="deal-content">
                                     <h3 className="deal-title">{deal.title}</h3>
-                                    
+
                                     <div className="deal-rating">
                                         <div className="stars">
                                             {renderStars(deal.rating)}
                                         </div>
                                         <span className="review-count">({deal.reviews.toLocaleString()})</span>
                                     </div>
-                                    
+
                                     <div className="deal-pricing">
                                         <span className="sale-price">${deal.salePrice}</span>
                                         <span className="original-price">${deal.originalPrice}</span>
                                     </div>
-                                    
+
                                     <div className="deal-progress">
                                         <div className="progress-bar">
-                                            <div 
+                                            <div
                                                 className="progress-fill"
                                                 style={{ width: `${deal.claimed}%` }}
                                             />
                                         </div>
                                         <span className="progress-text">{deal.claimed}% claimed</span>
                                     </div>
-                                    
-                                    <button className="add-to-cart-btn">
+
+                                    <button
+                                        className="add-to-cart-btn"
+                                        onClick={() => addToCart(deal)}
+                                    >
                                         <ShoppingCart size={16} />
                                         Add to Cart
                                     </button>
@@ -226,38 +234,43 @@ export default function DealsSections() {
                         <h2 className="section-title">Today's Deals</h2>
                         <a href="#" className="see-all-link">See all deals</a>
                     </div>
-                    
+
                     <div className="deals-grid">
                         {todaysDeals.map((deal) => (
                             <div key={deal.id} className="deal-card">
                                 <div className="deal-badge">
                                     <span className="discount-badge">-{deal.discount}%</span>
                                 </div>
-                                
+
                                 <div className="deal-image-container">
-                                    <img 
-                                        src={deal.image} 
+                                    <Image
+                                        src={deal.image}
                                         alt={deal.title}
+                                        width={300}
+                                        height={300}
                                         className="deal-image"
                                     />
                                 </div>
-                                
+
                                 <div className="deal-content">
                                     <h3 className="deal-title">{deal.title}</h3>
-                                    
+
                                     <div className="deal-rating">
                                         <div className="stars">
                                             {renderStars(deal.rating)}
                                         </div>
                                         <span className="review-count">({deal.reviews.toLocaleString()})</span>
                                     </div>
-                                    
+
                                     <div className="deal-pricing">
                                         <span className="sale-price">${deal.salePrice}</span>
                                         <span className="original-price">${deal.originalPrice}</span>
                                     </div>
-                                    
-                                    <button className="add-to-cart-btn">
+
+                                    <button
+                                        className="add-to-cart-btn"
+                                        onClick={() => addToCart(deal)}
+                                    >
                                         <ShoppingCart size={16} />
                                         Add to Cart
                                     </button>

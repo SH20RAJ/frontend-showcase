@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useRef } from 'react'
+import Image from 'next/image'
 import { ChevronLeft, ChevronRight, Star, ShoppingCart } from 'lucide-react'
 
 export default function RecentlyViewed() {
@@ -145,9 +146,11 @@ export default function RecentlyViewed() {
                         {recentlyViewedItems.map((item) => (
                             <div key={item.id} className="recently-viewed-item">
                                 <div className="item-image-container">
-                                    <img
+                                    <Image
                                         src={item.image}
                                         alt={item.title}
+                                        width={200}
+                                        height={200}
                                         className="item-image"
                                     />
                                 </div>

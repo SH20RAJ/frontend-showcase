@@ -102,26 +102,26 @@ export default function Footer() {
                 <div className="container">
                     <div className="footer-branding">
                         <div className="amazon-logo-footer">
-                            <img 
-                                src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" 
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
                                 alt="Amazon"
                                 className="logo-image"
                             />
                         </div>
-                        
+
                         <div className="footer-controls">
                             <button className="language-selector">
                                 <Globe size={16} />
                                 <span>English</span>
                             </button>
-                            
+
                             <button className="currency-selector">
                                 <span>$ USD - U.S. Dollar</span>
                             </button>
-                            
+
                             <button className="country-selector">
-                                <img 
-                                    src="https://flagcdn.com/w20/us.png" 
+                                <img
+                                    src="https://flagcdn.com/w20/us.png"
                                     alt="United States"
                                     className="flag-icon"
                                 />
@@ -276,7 +276,7 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div className="legal-links">
                         {bottomLinks.map((link, index) => (
                             <a key={index} href="#" className="legal-link">
