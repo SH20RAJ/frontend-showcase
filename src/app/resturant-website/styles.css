@@ -25,7 +25,7 @@ body {
     height: 100%;
     pointer-events: none;
     z-index: -1;
-    background: 
+    background:
         radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 40% 80%, rgba(119, 255, 198, 0.05) 0%, transparent 50%),
@@ -34,9 +34,19 @@ body {
 }
 
 @keyframes quantumShift {
-    0%, 100% { transform: rotate(0deg) scale(1); }
-    33% { transform: rotate(120deg) scale(1.1); }
-    66% { transform: rotate(240deg) scale(0.9); }
+
+    0%,
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    33% {
+        transform: rotate(120deg) scale(1.1);
+    }
+
+    66% {
+        transform: rotate(240deg) scale(0.9);
+    }
 }
 
 /* Neural Network Pattern */
@@ -47,7 +57,7 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background-image: 
+    background-image:
         linear-gradient(45deg, transparent 49.5%, rgba(255, 255, 255, 0.01) 50%, transparent 50.5%),
         linear-gradient(-45deg, transparent 49.5%, rgba(255, 255, 255, 0.01) 50%, transparent 50.5%);
     background-size: 100px 100px;
@@ -55,8 +65,17 @@ body {
 }
 
 @keyframes neuralPulse {
-    0%, 100% { opacity: 0.1; transform: scale(1); }
-    50% { opacity: 0.3; transform: scale(1.05); }
+
+    0%,
+    100% {
+        opacity: 0.1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.3;
+        transform: scale(1.05);
+    }
 }
 
 /* Advanced Keyframe Animations */
@@ -66,6 +85,7 @@ body {
         transform: translateY(40px) scale(0.95);
         filter: blur(2px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -79,6 +99,7 @@ body {
         transform: translateX(-50px) rotateY(-10deg);
         filter: blur(2px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0) rotateY(0);
@@ -92,6 +113,7 @@ body {
         transform: translateX(50px) rotateY(10deg);
         filter: blur(2px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0) rotateY(0);
@@ -100,20 +122,26 @@ body {
 }
 
 @keyframes morphicGlow {
-    0%, 100% {
-        box-shadow: 0 0 30px rgba(251, 191, 36, 0.2), 
-                    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
+    0%,
+    100% {
+        box-shadow: 0 0 30px rgba(251, 191, 36, 0.2),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
+
     50% {
-        box-shadow: 0 0 50px rgba(251, 191, 36, 0.4), 
-                    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 50px rgba(251, 191, 36, 0.4),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2);
     }
 }
 
 @keyframes floatingElement {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px) rotate(0deg);
     }
+
     50% {
         transform: translateY(-20px) rotate(2deg);
     }
@@ -123,25 +151,32 @@ body {
     0% {
         background-position: -1000px 0;
     }
+
     100% {
         background-position: 1000px 0;
     }
 }
 
 @keyframes liquidMotion {
-    0%, 100% {
+
+    0%,
+    100% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
+
     50% {
         border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
     }
 }
 
 @keyframes glassmorphismPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         backdrop-filter: blur(10px) saturate(200%);
         background: rgba(255, 255, 255, 0.1);
     }
+
     50% {
         backdrop-filter: blur(15px) saturate(250%);
         background: rgba(255, 255, 255, 0.15);
@@ -186,7 +221,7 @@ body {
     backdrop-filter: blur(20px) saturate(200%);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .glassmorphism-dark {
@@ -194,22 +229,22 @@ body {
     backdrop-filter: blur(25px) saturate(180%);
     border: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 /* Advanced Neomorphism */
 .neomorphism-light {
     background: linear-gradient(145deg, #f0f0f0, #ffffff);
-    box-shadow: 20px 20px 40px #d9d9d9, 
-                -20px -20px 40px #ffffff,
-                inset 5px 5px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 20px 20px 40px #d9d9d9,
+        -20px -20px 40px #ffffff,
+        inset 5px 5px 10px rgba(0, 0, 0, 0.05);
 }
 
 .neomorphism-dark {
     background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
-    box-shadow: 20px 20px 40px #0f0f0f, 
-                -20px -20px 40px #353535,
-                inset 5px 5px 10px rgba(255, 255, 255, 0.05);
+    box-shadow: 20px 20px 40px #0f0f0f,
+        -20px -20px 40px #353535,
+        inset 5px 5px 10px rgba(255, 255, 255, 0.05);
 }
 
 /* Micro-Interaction Hover Effects */
@@ -221,7 +256,7 @@ body {
 .hover-lift:hover {
     transform: translateY(-12px) translateZ(20px) rotateX(2deg);
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2),
-                0 10px 20px rgba(0, 0, 0, 0.1);
+        0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .hover-tilt {
@@ -235,29 +270,37 @@ body {
 
 /* Dynamic Gradient Backgrounds */
 .gradient-aurora {
-    background: linear-gradient(135deg, 
-        #667eea 0%, 
-        #764ba2 25%, 
-        #f093fb 50%, 
-        #f5576c 75%, 
-        #4facfe 100%);
+    background: linear-gradient(135deg,
+            #667eea 0%,
+            #764ba2 25%,
+            #f093fb 50%,
+            #f5576c 75%,
+            #4facfe 100%);
     background-size: 300% 300%;
     animation: gradientShift 8s ease infinite;
 }
 
 .gradient-luxury {
     background: linear-gradient(135deg,
-        #ffd89b 0%,
-        #19547b 50%,
-        #ffc371 100%);
+            #ffd89b 0%,
+            #19547b 50%,
+            #ffc371 100%);
     background-size: 200% 200%;
     animation: gradientShift 6s ease infinite;
 }
 
 @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Advanced Typography Effects */
@@ -271,10 +314,10 @@ body {
 }
 
 .text-shimmer {
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        rgba(255, 255, 255, 0.4) 50%, 
-        transparent 100%);
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            transparent 100%);
     background-size: 200% 100%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -284,19 +327,19 @@ body {
 /* Enhanced Shadows & Depth */
 .shadow-3xl {
     box-shadow: 0 35px 70px rgba(0, 0, 0, 0.25),
-                0 15px 35px rgba(0, 0, 0, 0.15);
+        0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .shadow-neon {
     box-shadow: 0 0 20px rgba(251, 191, 36, 0.5),
-                0 0 40px rgba(251, 191, 36, 0.3),
-                0 0 60px rgba(251, 191, 36, 0.1);
+        0 0 40px rgba(251, 191, 36, 0.3),
+        0 0 60px rgba(251, 191, 36, 0.1);
 }
 
 .shadow-inset-luxury {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1),
-                inset 0 8px 16px rgba(0, 0, 0, 0.1),
-                0 0 0 1px rgba(255, 255, 255, 0.05);
+        inset 0 8px 16px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
 /* Scroll-Triggered Animations */
@@ -391,10 +434,10 @@ body {
 
 /* Loading Animations */
 .loading-skeleton {
-    background: linear-gradient(90deg, 
-        rgba(255, 255, 255, 0.1) 25%, 
-        rgba(255, 255, 255, 0.2) 50%, 
-        rgba(255, 255, 255, 0.1) 75%);
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.1) 25%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.1) 75%);
     background-size: 200% 100%;
     animation: shimmerEffect 1.5s infinite;
 }
@@ -412,7 +455,7 @@ body {
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 
+    box-shadow:
         0 8px 32px 0 rgba(31, 38, 135, 0.37),
         inset 0 1px 0 rgba(255, 255, 255, 0.2),
         inset 0 -1px 0 rgba(255, 255, 255, 0.1);
@@ -433,7 +476,7 @@ body {
     width: 0;
     height: 0;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
     transition: all 0.6s ease;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -446,7 +489,7 @@ body {
 
 .quantum-hover:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 /* Neural Network Animation */
@@ -455,11 +498,12 @@ body {
 }
 
 @keyframes neuralGlow {
-    0% { 
+    0% {
         box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
         border-color: rgba(59, 130, 246, 0.3);
     }
-    100% { 
+
+    100% {
         box-shadow: 0 0 40px rgba(147, 51, 234, 0.5);
         border-color: rgba(147, 51, 234, 0.5);
     }
@@ -482,8 +526,15 @@ html {
 }
 
 @keyframes holographicShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 /* Voice Recognition Indicator */
@@ -492,11 +543,14 @@ html {
 }
 
 @keyframes voicePulse {
-    0%, 100% { 
+
+    0%,
+    100% {
         box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
         background-color: rgba(34, 197, 94, 0.8);
     }
-    50% { 
+
+    50% {
         box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
         background-color: rgba(34, 197, 94, 1);
     }
@@ -525,17 +579,22 @@ html {
 
 /* 2025 Loading Animations */
 .skeleton-2025 {
-    background: linear-gradient(90deg, 
-        rgba(255,255,255,0.1) 25%, 
-        rgba(255,255,255,0.2) 50%, 
-        rgba(255,255,255,0.1) 75%);
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.1) 25%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.1) 75%);
     background-size: 200% 100%;
     animation: skeleton2025 1.5s infinite;
 }
 
 @keyframes skeleton2025 {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
 }
 
 /* Revolutionary Parallax Effects */
