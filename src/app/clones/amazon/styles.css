@@ -1,0 +1,244 @@
+/* Amazon Clone Styles */
+
+/* Custom Amazon Colors */
+:root {
+    --amazon-orange: #ff9900;
+    --amazon-blue: #232f3e;
+    --amazon-light-blue: #37475a;
+    --amazon-yellow: #febd69;
+    --amazon-search: #f3f3f3;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Amazon Ember", Arial, sans-serif;
+    background-color: #eaeded;
+}
+
+/* Amazon Header Styles */
+.amazon-header {
+    background-color: var(--amazon-blue);
+    color: white;
+    padding: 0;
+}
+
+.amazon-logo {
+    width: 100px;
+    height: 30px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30"><text x="10" y="20" fill="white" font-size="16" font-weight="bold">amazon</text></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.amazon-search-bar {
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    height: 40px;
+}
+
+.amazon-search-dropdown {
+    background-color: #f3f3f3;
+    border: none;
+    padding: 0 10px;
+    border-right: 1px solid #cdcdcd;
+}
+
+.amazon-search-input {
+    flex: 1;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+}
+
+.amazon-search-btn {
+    background-color: var(--amazon-orange);
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+/* Navigation Styles */
+.amazon-nav {
+    background-color: var(--amazon-light-blue);
+    color: white;
+    padding: 8px 0;
+}
+
+/* Product Card Styles */
+.product-card {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.product-title {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.stars {
+    color: var(--amazon-orange);
+    margin-right: 8px;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #b12704;
+    margin-bottom: 4px;
+}
+
+.product-original-price {
+    font-size: 14px;
+    color: #565959;
+    text-decoration: line-through;
+}
+
+/* Category Card Styles */
+.category-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-2px);
+}
+
+.category-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+/* Deal Badge */
+.deal-badge {
+    background: #cc0c39;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+/* Carousel Styles */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .amazon-search-bar {
+        height: 36px;
+    }
+
+    .product-card {
+        padding: 12px;
+    }
+
+    .product-image {
+        height: 150px;
+    }
+
+    .category-image {
+        height: 100px;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
